@@ -8,12 +8,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="Credits"
-        android:textSize="32sp"/>
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Vu Dao, 010066056" />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Name, BroncoID"
         android:layout_gravity="center_horizontal"
-        android:textSize="32sp"/>
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Khang Lam, 009818367" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Jason Lin, 009954438" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Gary Liang, 010144030" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Brian Hoang, 010122021" />
+
+    <Button
+        android:text="return to main menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:id="@+id/back_button"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        />
 </LinearLayout>

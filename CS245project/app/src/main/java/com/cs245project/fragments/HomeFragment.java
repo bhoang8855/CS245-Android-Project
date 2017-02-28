@@ -41,6 +41,29 @@ public class HomeFragment extends Fragment {
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
                         .replace(R.id.main_container, CreditsFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        ((Button)getActivity().findViewById(R.id.play_button)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.main_container, SettingsFragment.newInstance())
+                        .addToBackStack(null)
+                        .commit();
+            }
+        });
+
+        ((Button)getActivity().findViewById(R.id.high_score_button)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getActivity().getSupportFragmentManager()
+                        .beginTransaction()
+                        .replace(R.id.main_container, ScoresFragment.newInstance())
+                        .addToBackStack(null)
                         .commit();
             }
         });
