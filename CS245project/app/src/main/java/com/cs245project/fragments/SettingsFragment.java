@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.cs245project.MainActivity;
 import com.cs245project.R;
 
 /**
@@ -17,6 +16,8 @@ import com.cs245project.R;
  */
 
 public class SettingsFragment extends Fragment {
+    int progress = 0;
+    int difficulty = 0;
 
     public static SettingsFragment newInstance() { return new SettingsFragment();}
 
@@ -41,10 +42,11 @@ public class SettingsFragment extends Fragment {
         textView.setText("4 / 20");
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            int progress = 0;
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 progress = i;
+                difficulty = i * 2 + 4;
+                System.out.println(difficulty);
                 textView.setText(i * 2 + 4 + " /  20");
             }
 
@@ -62,11 +64,61 @@ public class SettingsFragment extends Fragment {
         ((Button)getActivity().findViewById(R.id.game_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .replace(R.id.main_container, GameFragment.newInstance())
-                        .addToBackStack(null)
-                        .commit();
+                if(difficulty == 20) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment20.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 18) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment18.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 16) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment16.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 14) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment14.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 12) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment12.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 10) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment10.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 8) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment8.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(difficulty == 6) {
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment6.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                } else if(progress == 0){
+                    getActivity().getSupportFragmentManager()
+                            .beginTransaction()
+                            .replace(R.id.main_container, GameFragment4.newInstance())
+                            .addToBackStack(null)
+                            .commit();
+                }
             }
         });
 
