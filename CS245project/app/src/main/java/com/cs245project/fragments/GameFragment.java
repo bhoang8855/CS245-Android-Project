@@ -48,12 +48,6 @@ public class GameFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
-        for(int i = 0; i < difficulty / 2; i++) {
-            list.add(words[i]);
-            list.add(words[i]);
-        }
-
-        Collections.shuffle(list);
         View view;
         if(difficulty == 4) {
             view = inflater.inflate(R.layout.fragment_game4, container, false);
@@ -340,6 +334,15 @@ public class GameFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+
+        for(int i = 0; i < difficulty / 2; i++) {
+            list.add(words[i]);
+            list.add(words[i]);
+        }
+
+        Collections.shuffle(list);
+
+        
         ((Button)getActivity().findViewById(R.id.new_game_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
