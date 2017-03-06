@@ -35,6 +35,8 @@ public class GameFragment extends Fragment {
     private ToggleButton toggle1, toggle2, toggle3, toggle4, toggle5, toggle6, toggle7, toggle8, toggle9, toggle10,
             toggle11, toggle12, toggle13, toggle14, toggle15, toggle16, toggle17, toggle18, toggle19, toggle20;
 
+    ToggleButton tempButton=null;
+    int tempNum;
     public static GameFragment newInstance(int difficulty) {
         GameFragment fragment = new GameFragment();
         fragment.difficulty = difficulty;
@@ -44,6 +46,8 @@ public class GameFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
     }
+
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -69,11 +73,14 @@ public class GameFragment extends Fragment {
             view = inflater.inflate(R.layout.fragment_game20, container, false);
         }
 
+
+
         toggle1 = (ToggleButton) view.findViewById(R.id.tile1);
         toggle1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
                 if (isChecked) {
-                    toggle1.setTextOn(list.get(0));
+                    checkButton(toggle1, 0);
                     // The toggle is enabled
                 } else {
                     // The toggle is disabled
@@ -85,7 +92,8 @@ public class GameFragment extends Fragment {
         toggle2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    toggle2.setTextOn(list.get(1));
+
+                    checkButton(toggle2, 1);
                     // The toggle is enabled
                 } else {
                     // The toggle is disabled
@@ -97,7 +105,7 @@ public class GameFragment extends Fragment {
         toggle3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    toggle3.setTextOn(list.get(2));
+                    checkButton(toggle3, 2);
                     // The toggle is enabled
                 } else {
                     // The toggle is disabled
@@ -109,8 +117,7 @@ public class GameFragment extends Fragment {
         toggle4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
-                    toggle4.setTextOn(list.get(3));
-                    // The toggle is enabled
+                    checkButton(toggle4, 3);
                 } else {
                     // The toggle is disabled
                 }
@@ -123,7 +130,7 @@ public class GameFragment extends Fragment {
             toggle5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle5.setTextOn(list.get(4));
+                        checkButton(toggle5, 4);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -135,7 +142,7 @@ public class GameFragment extends Fragment {
             toggle6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle6.setTextOn(list.get(5));
+                        checkButton(toggle6, 5);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -149,7 +156,7 @@ public class GameFragment extends Fragment {
             toggle7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle7.setTextOn(list.get(6));
+                        checkButton(toggle7, 6);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -161,7 +168,7 @@ public class GameFragment extends Fragment {
             toggle8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle8.setTextOn(list.get(7));
+                        checkButton(toggle8, 7);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -175,7 +182,7 @@ public class GameFragment extends Fragment {
             toggle9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle9.setTextOn(list.get(8));
+                        checkButton(toggle9, 8);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -188,7 +195,7 @@ public class GameFragment extends Fragment {
             toggle10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle10.setTextOn(list.get(9));
+                        checkButton(toggle10, 9);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -202,7 +209,7 @@ public class GameFragment extends Fragment {
             toggle11.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle11.setTextOn(list.get(10));
+                        checkButton(toggle11, 10);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -214,7 +221,7 @@ public class GameFragment extends Fragment {
             toggle12.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle12.setTextOn(list.get(11));
+                        checkButton(toggle12, 11);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -228,7 +235,7 @@ public class GameFragment extends Fragment {
             toggle13.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle13.setTextOn(list.get(12));
+                        checkButton(toggle13, 12);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -240,7 +247,7 @@ public class GameFragment extends Fragment {
             toggle14.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle14.setTextOn(list.get(13));
+                        checkButton(toggle14, 13);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -254,7 +261,7 @@ public class GameFragment extends Fragment {
             toggle15.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle15.setTextOn(list.get(14));
+                        checkButton(toggle15, 14);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -266,7 +273,7 @@ public class GameFragment extends Fragment {
             toggle16.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle16.setTextOn(list.get(15));
+                        checkButton(toggle16, 15);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -280,7 +287,7 @@ public class GameFragment extends Fragment {
             toggle17.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle17.setTextOn(list.get(16));
+                        checkButton(toggle17, 16);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -292,7 +299,7 @@ public class GameFragment extends Fragment {
             toggle18.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle18.setTextOn(list.get(17));
+                        checkButton(toggle18, 17);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -306,7 +313,7 @@ public class GameFragment extends Fragment {
             toggle19.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle19.setTextOn(list.get(18));
+                        checkButton(toggle19, 18);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -318,7 +325,7 @@ public class GameFragment extends Fragment {
             toggle20.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
-                        toggle20.setTextOn(list.get(19));
+                        checkButton(toggle20, 19);
                         // The toggle is enabled
                     } else {
                         // The toggle is disabled
@@ -355,5 +362,37 @@ public class GameFragment extends Fragment {
         });
 
 
+    }
+
+    public void checkButton( ToggleButton X, int I) {
+
+        System.out.println("hitXXX");
+        System.out.println(list.get(0));
+        System.out.println(list.get(1));
+        System.out.println(list.get(2));
+        System.out.println(list.get(3));
+        X.setTextOn(list.get(I));
+        if (tempButton == null) {
+            tempButton = X;
+            tempNum = I;
+            tempButton.setClickable(false);
+        }
+        else if ( list.get(tempNum) == list.get(I) && tempButton != X) {
+            //         X.setTextOn("Correct");
+            X.setTextColor(0xFF00FF00);
+            //          tempButton.setText("Correct");
+            tempButton.setTextColor(0xFF00FF00);
+            tempButton.setClickable(false);
+            X.setClickable(false);
+            tempButton=null;
+        }
+        else {
+            tempButton.setChecked(false);
+            X.setChecked(false);
+            tempNum = 999;
+            X.setClickable(true);
+            tempButton.setClickable(true);
+            tempButton = null;
+        }
     }
 }
