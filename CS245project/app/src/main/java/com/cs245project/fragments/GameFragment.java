@@ -379,6 +379,7 @@ public class GameFragment extends Fragment {
         }
         else if ( list.get(tempNum) == list.get(I) && tempButton != X) {
             //         X.setTextOn("Correct");
+            System.out.println("correct");
             X.setTextColor(0xFF00FF00);
             //          tempButton.setText("Correct");
             tempButton.setTextColor(0xFF00FF00);
@@ -387,6 +388,7 @@ public class GameFragment extends Fragment {
             tempButton=null;
         }
         else {
+            System.out.println("wait");
             tempButton.setChecked(false);
             X.setChecked(false);
             tempNum = 999;
