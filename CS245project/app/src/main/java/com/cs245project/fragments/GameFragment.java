@@ -36,10 +36,9 @@ public class GameFragment extends Fragment {
     private ToggleButton toggle1, toggle2, toggle3, toggle4, toggle5, toggle6, toggle7, toggle8, toggle9, toggle10,
             toggle11, toggle12, toggle13, toggle14, toggle15, toggle16, toggle17, toggle18, toggle19, toggle20;
 
-    private List<ToggleButton> buttons = new ArrayList<ToggleButton>();
+    private List<ToggleButton> buttons = new ArrayList<>();
     ToggleButton tempButton=null;
     int tempNum;
-    int numOfButtons;
 
     public static GameFragment newInstance(int difficulty) {
         GameFragment fragment = new GameFragment();
@@ -59,31 +58,22 @@ public class GameFragment extends Fragment {
         View view;
         if(difficulty == 4) {
             view = inflater.inflate(R.layout.fragment_game4, container, false);
-            numOfButtons = 4;
         } else if(difficulty == 6) {
             view = inflater.inflate(R.layout.fragment_game6, container, false);
-            numOfButtons = 6;
         } else if(difficulty == 8) {
             view = inflater.inflate(R.layout.fragment_game8, container, false);
-            numOfButtons = 8;
         } else if(difficulty == 10) {
             view = inflater.inflate(R.layout.fragment_game10, container, false);
-            numOfButtons = 10;
         } else if(difficulty == 12) {
             view = inflater.inflate(R.layout.fragment_game12, container, false);
-            numOfButtons = 12;
         } else if(difficulty == 14) {
             view = inflater.inflate(R.layout.fragment_game14, container, false);
-            numOfButtons = 14;
         } else if(difficulty == 16) {
             view = inflater.inflate(R.layout.fragment_game16, container, false);
-            numOfButtons = 16;
         } else if(difficulty == 18) {
             view = inflater.inflate(R.layout.fragment_game18, container, false);
-            numOfButtons = 18;
         } else {
             view = inflater.inflate(R.layout.fragment_game20, container, false);
-            numOfButtons = 20;
         }
 
 
@@ -508,10 +498,6 @@ public class GameFragment extends Fragment {
     public void checkButton( ToggleButton X, int I) {
 
         System.out.println("hitXXX");
-        System.out.println(list.get(0));
-        System.out.println(list.get(1));
-        System.out.println(list.get(2));
-        System.out.println(list.get(3));
         X.setTextOn(list.get(I));
         if (tempButton == null) {
             tempButton = X;
