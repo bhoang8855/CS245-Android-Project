@@ -32,6 +32,8 @@ public class GameFragment extends Fragment {
 
     private int difficulty;
     List<String> list = new ArrayList<>();
+    List<Integer> flipped = new ArrayList<>();
+    List<ToggleButton> buttons = new ArrayList<>();
     private ToggleButton toggle1, toggle2, toggle3, toggle4, toggle5, toggle6, toggle7, toggle8, toggle9, toggle10,
             toggle11, toggle12, toggle13, toggle14, toggle15, toggle16, toggle17, toggle18, toggle19, toggle20;
 
@@ -53,6 +55,10 @@ public class GameFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         View view;
+
+        if(savedInstanceState != null){
+            difficulty = savedInstanceState.getInt("DIFFICULTY");
+        }
         if(difficulty == 4) {
             view = inflater.inflate(R.layout.fragment_game4, container, false);
         } else if(difficulty == 6) {
@@ -76,6 +82,7 @@ public class GameFragment extends Fragment {
 
 
         toggle1 = (ToggleButton) view.findViewById(R.id.tile1);
+        buttons.add(toggle1);
         toggle1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
 
@@ -89,6 +96,7 @@ public class GameFragment extends Fragment {
         });
 
         toggle2 = (ToggleButton) view.findViewById(R.id.tile2);
+        buttons.add(toggle2);
         toggle2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -102,6 +110,7 @@ public class GameFragment extends Fragment {
         });
 
         toggle3 = (ToggleButton) view.findViewById(R.id.tile3);
+        buttons.add(toggle3);
         toggle3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -114,6 +123,7 @@ public class GameFragment extends Fragment {
         });
 
         toggle4 = (ToggleButton) view.findViewById(R.id.tile4);
+        buttons.add(toggle4);
         toggle4.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
@@ -127,6 +137,7 @@ public class GameFragment extends Fragment {
         if(difficulty > 4) {
 
             toggle5 = (ToggleButton) view.findViewById(R.id.tile5);
+            buttons.add(toggle5);
             toggle5.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -139,6 +150,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle6 = (ToggleButton) view.findViewById(R.id.tile6);
+            buttons.add(toggle6);
             toggle6.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -153,6 +165,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 6) {
             toggle7 = (ToggleButton) view.findViewById(R.id.tile7);
+            buttons.add(toggle7);
             toggle7.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -165,6 +178,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle8 = (ToggleButton) view.findViewById(R.id.tile8);
+            buttons.add(toggle8);
             toggle8.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -179,6 +193,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 8) {
             toggle9 = (ToggleButton) view.findViewById(R.id.tile9);
+            buttons.add(toggle9);
             toggle9.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -192,6 +207,7 @@ public class GameFragment extends Fragment {
 
 
             toggle10 = (ToggleButton) view.findViewById(R.id.tile10);
+            buttons.add(toggle10);
             toggle10.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -206,6 +222,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 10) {
             toggle11 = (ToggleButton) view.findViewById(R.id.tile11);
+            buttons.add(toggle11);
             toggle11.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -218,6 +235,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle12 = (ToggleButton) view.findViewById(R.id.tile12);
+            buttons.add(toggle12);
             toggle12.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -232,6 +250,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 12) {
             toggle13 = (ToggleButton) view.findViewById(R.id.tile13);
+            buttons.add(toggle13);
             toggle13.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -244,6 +263,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle14 = (ToggleButton) view.findViewById(R.id.tile14);
+            buttons.add(toggle14);
             toggle14.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -258,6 +278,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 14) {
             toggle15 = (ToggleButton) view.findViewById(R.id.tile15);
+            buttons.add(toggle15);
             toggle15.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -270,6 +291,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle16 = (ToggleButton) view.findViewById(R.id.tile16);
+            buttons.add(toggle16);
             toggle16.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -284,6 +306,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 16) {
             toggle17 = (ToggleButton) view.findViewById(R.id.tile17);
+            buttons.add(toggle17);
             toggle17.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -296,6 +319,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle18 = (ToggleButton) view.findViewById(R.id.tile18);
+            buttons.add(toggle18);
             toggle18.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -310,6 +334,7 @@ public class GameFragment extends Fragment {
 
         if(difficulty > 18) {
             toggle19 = (ToggleButton) view.findViewById(R.id.tile19);
+            buttons.add(toggle19);
             toggle19.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -322,6 +347,7 @@ public class GameFragment extends Fragment {
             });
 
             toggle20 = (ToggleButton) view.findViewById(R.id.tile20);
+            buttons.add(toggle20);
             toggle20.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
                 public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                     if (isChecked) {
@@ -334,6 +360,7 @@ public class GameFragment extends Fragment {
             });
         }
 
+
         return view;
     }
 
@@ -341,16 +368,28 @@ public class GameFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        //if(savedInstanceState == null) {
+            for (int i = 0; i < difficulty / 2; i++) {
+                list.add(words[i]);
+                list.add(words[i]);
+            }
 
-        for(int i = 0; i < difficulty / 2; i++) {
-            list.add(words[i]);
-            list.add(words[i]);
+            Collections.shuffle(list);
+        //}
+
+        if(savedInstanceState != null) {
+            list = savedInstanceState.getStringArrayList("LIST");
+            flipped = savedInstanceState.getIntegerArrayList("BUTTONLIST");
+
+            if (flipped != null && buttons != null) {
+                for (int i = 0; i < flipped.size(); i++) {
+                    ToggleButton b = buttons.get(flipped.get(i));
+                    b.setChecked(true);
+                }
+            }
+
         }
-
-        Collections.shuffle(list);
-
-        
-        ((Button)getActivity().findViewById(R.id.new_game_button)).setOnClickListener(new View.OnClickListener() {
+            ((Button)getActivity().findViewById(R.id.new_game_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 getActivity().getSupportFragmentManager()
@@ -375,6 +414,7 @@ public class GameFragment extends Fragment {
         if (tempButton == null) {
             tempButton = X;
             tempNum = I;
+            flipped.add(I);
             tempButton.setClickable(false);
         }
         else if ( list.get(tempNum) == list.get(I) && tempButton != X) {
@@ -384,6 +424,8 @@ public class GameFragment extends Fragment {
             //          tempButton.setText("Correct");
             tempButton.setTextColor(0xFF00FF00);
             tempButton.setClickable(false);
+            flipped.add(tempNum);
+            flipped.add(I);
             X.setClickable(false);
             tempButton=null;
         }
@@ -395,6 +437,17 @@ public class GameFragment extends Fragment {
             X.setClickable(true);
             tempButton.setClickable(true);
             tempButton = null;
+            flipped.remove(flipped.size() - 1);
         }
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putStringArrayList("LIST", (ArrayList<String>) list);
+        outState.putIntegerArrayList("BUTTONLIST", (ArrayList<Integer>) flipped);
+        outState.putInt("DIFFICULTY", difficulty);
+    }
+
+
 }
