@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/highScore3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/highScore2"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignStart="@+id/highScore2"
+        android:layout_below="@+id/highScore2"
+        android:layout_marginTop="39dp"
+        android:gravity="left|center"
+        android:text="3.)"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/highScore2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/highScore1"
+        android:layout_alignStart="@+id/highScore1"
+        android:layout_below="@+id/highScore1"
+        android:layout_marginTop="35dp"
+        android:gravity="left|center"
+        android:text="2.)"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/highScore1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView"
+        android:layout_marginLeft="22dp"
+        android:layout_marginStart="22dp"
+        android:layout_marginTop="40dp"
+        android:gravity="left|center"
+        android:text="1.)"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:gravity="center"
+        android:text="High Scores (LV 4):"
+        android:textSize="30sp" />
+</RelativeLayout>
