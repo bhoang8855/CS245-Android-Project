@@ -1,5 +1,6 @@
 package com.cs245project.fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -9,6 +10,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import com.cs245project.GameActivity;
 import com.cs245project.R;
 
 /**
@@ -65,11 +67,10 @@ public class SettingsFragment extends Fragment {
         ((Button)getActivity().findViewById(R.id.game_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                getActivity().getSupportFragmentManager()
-                        .beginTransaction()
-                        .addToBackStack(null)
-                        .replace(R.id.main_container, GameFragment.newInstance(difficulty))
-                        .commit();
+
+                Intent i = new Intent(getActivity(), GameActivity.class);
+                i.putExtra("DIFFICULTY", difficulty);
+                getActivity().startActivity(i);
             }
         });
 
