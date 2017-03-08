@@ -4,6 +4,7 @@ package com.cs245project.fragments;
  * Created by jason on 3/5/2017.
  */
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
@@ -27,7 +28,7 @@ import java.util.List;
 public class GameFragment extends Fragment {
 
     private final String[] words =
-            {"PANDA", "LION", "DONKEY", "ZEBRA", "WHALE", "TURLEY",
+            {"PANDA", "LION", "DONKEY", "ZEBRA", "WHALE", "TURKEY",
             "CHICKEN", "LIZARD", "GIRAFFE", "DOLPHIN"};
 
     private int difficulty;
@@ -400,7 +401,103 @@ public class GameFragment extends Fragment {
             }
         });
 
+        ((Button)getActivity().findViewById(R.id.try_again_button)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    for(int i = 0; i < difficulty; i++){
+                            if(buttons.get(i).getCurrentTextColor() == Color.RED){
+                                buttons.get(i).setChecked(false);
+                                buttons.get(i).setClickable(true);
+                                buttons.get(i).setTextColor(Color.BLACK);
+                            }
+                       }
+                    enableAllButtons();
+                }
+        });
+    }
 
+    private void disableAllButtons(){
+        //for(int i = 0; i < numOfButtons; i++){
+        //    buttons.get(i).setEnabled(false);
+        //}
+        toggle1.setEnabled(false);
+        toggle2.setEnabled(false);
+        toggle3.setEnabled(false);
+        toggle4.setEnabled(false);
+        if(difficulty > 4) {
+            toggle5.setEnabled(false);
+            toggle6.setEnabled(false);
+        }
+        if(difficulty > 6) {
+            toggle7.setEnabled(false);
+            toggle8.setEnabled(false);
+        }
+        if(difficulty > 8) {
+            toggle9.setEnabled(false);
+            toggle10.setEnabled(false);
+        }
+        if(difficulty > 10) {
+            toggle11.setEnabled(false);
+            toggle12.setEnabled(false);
+        }
+        if(difficulty > 12) {
+            toggle13.setEnabled(false);
+            toggle14.setEnabled(false);
+        }
+        if(difficulty > 14) {
+            toggle15.setEnabled(false);
+            toggle16.setEnabled(false);
+        }
+        if(difficulty > 16) {
+            toggle17.setEnabled(false);
+            toggle18.setEnabled(false);
+        }
+        if(difficulty > 18) {
+            toggle19.setEnabled(false);
+            toggle20.setEnabled(false);
+        }
+    }
+
+    private void enableAllButtons(){
+        //for(int i = 0; i < numOfButtons; i++){
+        //    buttons.get(i).setEnabled(true);
+        //}
+        toggle1.setEnabled(true);
+        toggle2.setEnabled(true);
+        toggle3.setEnabled(true);
+        toggle4.setEnabled(true);
+        if(difficulty > 4) {
+            toggle5.setEnabled(true);
+            toggle6.setEnabled(true);
+        }
+        if(difficulty > 6) {
+            toggle7.setEnabled(true);
+            toggle8.setEnabled(true);
+        }
+        if(difficulty > 8) {
+            toggle9.setEnabled(true);
+            toggle10.setEnabled(true);
+        }
+        if(difficulty > 10) {
+            toggle11.setEnabled(true);
+            toggle12.setEnabled(true);
+        }
+        if(difficulty > 12) {
+            toggle13.setEnabled(true);
+            toggle14.setEnabled(true);
+        }
+        if(difficulty > 14) {
+            toggle15.setEnabled(true);
+            toggle16.setEnabled(true);
+        }
+        if(difficulty > 16) {
+            toggle17.setEnabled(true);
+            toggle18.setEnabled(true);
+        }
+        if(difficulty > 18) {
+            toggle19.setEnabled(true);
+            toggle20.setEnabled(true);
+        }
     }
 
     public void checkButton( ToggleButton X, int I) {
@@ -430,13 +527,13 @@ public class GameFragment extends Fragment {
             tempButton=null;
         }
         else {
-            System.out.println("wait");
-            tempButton.setChecked(false);
-            X.setChecked(false);
-            tempNum = 999;
-            X.setClickable(true);
-            tempButton.setClickable(true);
-            tempButton = null;
+            System.out.println("incorrect");
+            X.setTextColor(Color.RED);
+            tempButton.setTextColor(Color.RED);
+            tempButton.setClickable(false);
+            X.setClickable(false);
+            tempButton=null;
+            disableAllButtons();
             flipped.remove(flipped.size() - 1);
         }
     }

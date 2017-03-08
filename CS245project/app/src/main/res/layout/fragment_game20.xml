@@ -242,7 +242,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Try Again"
-            android:id="@+id/button8"
+            android:id="@+id/try_again_button"
             android:layout_marginRight="10dp"
             android:textSize="20sp"
             android:background="@android:color/darker_gray" />
