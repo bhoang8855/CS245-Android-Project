@@ -4,6 +4,7 @@ package com.cs245project.fragments;
  * Created by jason on 3/5/2017.
  */
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.PagerAdapter;
@@ -27,7 +28,7 @@ import java.util.List;
 public class GameFragment extends Fragment {
 
     private final String[] words =
-            {"PANDA", "LION", "DONKEY", "ZEBRA", "WHALE", "TURLEY",
+            {"PANDA", "LION", "DONKEY", "ZEBRA", "WHALE", "TURKEY",
             "CHICKEN", "LIZARD", "GIRAFFE", "DOLPHIN"};
 
     private int difficulty;
@@ -35,8 +36,11 @@ public class GameFragment extends Fragment {
     private ToggleButton toggle1, toggle2, toggle3, toggle4, toggle5, toggle6, toggle7, toggle8, toggle9, toggle10,
             toggle11, toggle12, toggle13, toggle14, toggle15, toggle16, toggle17, toggle18, toggle19, toggle20;
 
+    private List<ToggleButton> buttons = new ArrayList<ToggleButton>();
     ToggleButton tempButton=null;
     int tempNum;
+    int numOfButtons;
+
     public static GameFragment newInstance(int difficulty) {
         GameFragment fragment = new GameFragment();
         fragment.difficulty = difficulty;
@@ -55,22 +59,31 @@ public class GameFragment extends Fragment {
         View view;
         if(difficulty == 4) {
             view = inflater.inflate(R.layout.fragment_game4, container, false);
+            numOfButtons = 4;
         } else if(difficulty == 6) {
             view = inflater.inflate(R.layout.fragment_game6, container, false);
+            numOfButtons = 6;
         } else if(difficulty == 8) {
             view = inflater.inflate(R.layout.fragment_game8, container, false);
+            numOfButtons = 8;
         } else if(difficulty == 10) {
             view = inflater.inflate(R.layout.fragment_game10, container, false);
+            numOfButtons = 10;
         } else if(difficulty == 12) {
             view = inflater.inflate(R.layout.fragment_game12, container, false);
+            numOfButtons = 12;
         } else if(difficulty == 14) {
             view = inflater.inflate(R.layout.fragment_game14, container, false);
+            numOfButtons = 14;
         } else if(difficulty == 16) {
             view = inflater.inflate(R.layout.fragment_game16, container, false);
+            numOfButtons = 16;
         } else if(difficulty == 18) {
             view = inflater.inflate(R.layout.fragment_game18, container, false);
+            numOfButtons = 18;
         } else {
             view = inflater.inflate(R.layout.fragment_game20, container, false);
+            numOfButtons = 20;
         }
 
 
@@ -124,6 +137,11 @@ public class GameFragment extends Fragment {
             }
         });
 
+        buttons.add(toggle1);
+        buttons.add(toggle2);
+        buttons.add(toggle3);
+        buttons.add(toggle4);
+
         if(difficulty > 4) {
 
             toggle5 = (ToggleButton) view.findViewById(R.id.tile5);
@@ -149,6 +167,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle5);
+            buttons.add(toggle6);
         }
 
         if(difficulty > 6) {
@@ -175,6 +196,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle7);
+            buttons.add(toggle8);
         }
 
         if(difficulty > 8) {
@@ -202,6 +226,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle9);
+            buttons.add(toggle10);
         }
 
         if(difficulty > 10) {
@@ -228,6 +255,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle11);
+            buttons.add(toggle12);
         }
 
         if(difficulty > 12) {
@@ -254,6 +284,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle13);
+            buttons.add(toggle14);
         }
 
         if(difficulty > 14) {
@@ -280,6 +313,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle15);
+            buttons.add(toggle16);
         }
 
         if(difficulty > 16) {
@@ -306,6 +342,9 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
+
+            buttons.add(toggle17);
+            buttons.add(toggle18);
         }
 
         if(difficulty > 18) {
@@ -332,8 +371,11 @@ public class GameFragment extends Fragment {
                     }
                 }
             });
-        }
 
+            buttons.add(toggle19);
+            buttons.add(toggle20);
+
+        }
         return view;
     }
 
@@ -361,7 +403,106 @@ public class GameFragment extends Fragment {
             }
         });
 
+        ((Button)getActivity().findViewById(R.id.try_again_button)).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                for(int i = 0; i < difficulty; i++){
+                    if(buttons.get(i).getCurrentTextColor() == Color.RED){
 
+                        buttons.get(i).setChecked(false);
+                        buttons.get(i).setClickable(true);
+                        buttons.get(i).setTextColor(Color.BLACK);
+                    }
+                }
+                enableAllButtons();
+            }
+        });
+
+
+    }
+
+    private void disableAllButtons(){
+        //for(int i = 0; i < numOfButtons; i++){
+        //    buttons.get(i).setEnabled(false);
+        //}
+        toggle1.setEnabled(false);
+        toggle2.setEnabled(false);
+        toggle3.setEnabled(false);
+        toggle4.setEnabled(false);
+        if(difficulty > 4) {
+            toggle5.setEnabled(false);
+            toggle6.setEnabled(false);
+        }
+        if(difficulty > 6) {
+            toggle7.setEnabled(false);
+            toggle8.setEnabled(false);
+        }
+        if(difficulty > 8) {
+            toggle9.setEnabled(false);
+            toggle10.setEnabled(false);
+        }
+        if(difficulty > 10) {
+            toggle11.setEnabled(false);
+            toggle12.setEnabled(false);
+        }
+        if(difficulty > 12) {
+            toggle13.setEnabled(false);
+            toggle14.setEnabled(false);
+        }
+        if(difficulty > 14) {
+            toggle15.setEnabled(false);
+            toggle16.setEnabled(false);
+        }
+        if(difficulty > 16) {
+            toggle17.setEnabled(false);
+            toggle18.setEnabled(false);
+        }
+        if(difficulty > 18) {
+            toggle19.setEnabled(false);
+            toggle20.setEnabled(false);
+        }
+    }
+
+    private void enableAllButtons(){
+        //for(int i = 0; i < numOfButtons; i++){
+        //    buttons.get(i).setEnabled(true);
+        //}
+        toggle1.setEnabled(true);
+        toggle2.setEnabled(true);
+        toggle3.setEnabled(true);
+        toggle4.setEnabled(true);
+        if(difficulty > 4) {
+            toggle5.setEnabled(true);
+            toggle6.setEnabled(true);
+        }
+        if(difficulty > 6) {
+            toggle7.setEnabled(true);
+            toggle8.setEnabled(true);
+        }
+        if(difficulty > 8) {
+            toggle9.setEnabled(true);
+            toggle10.setEnabled(true);
+        }
+        if(difficulty > 10) {
+            toggle11.setEnabled(true);
+            toggle12.setEnabled(true);
+        }
+        if(difficulty > 12) {
+            toggle13.setEnabled(true);
+            toggle14.setEnabled(true);
+        }
+        if(difficulty > 14) {
+            toggle15.setEnabled(true);
+            toggle16.setEnabled(true);
+        }
+        if(difficulty > 16) {
+            toggle17.setEnabled(true);
+            toggle18.setEnabled(true);
+        }
+        if(difficulty > 18) {
+            toggle19.setEnabled(true);
+            toggle20.setEnabled(true);
+        }
     }
 
     public void checkButton( ToggleButton X, int I) {
@@ -381,6 +522,7 @@ public class GameFragment extends Fragment {
             //         X.setTextOn("Correct");
             System.out.println("correct");
             X.setTextColor(0xFF00FF00);
+            X.getCurrentTextColor();
             //          tempButton.setText("Correct");
             tempButton.setTextColor(0xFF00FF00);
             tempButton.setClickable(false);
@@ -388,13 +530,16 @@ public class GameFragment extends Fragment {
             tempButton=null;
         }
         else {
-            System.out.println("wait");
-            tempButton.setChecked(false);
-            X.setChecked(false);
-            tempNum = 999;
-            X.setClickable(true);
-            tempButton.setClickable(true);
-            tempButton = null;
+            System.out.println("incorrect");
+            X.setTextColor(Color.RED);
+
+            //          tempButton.setText("Correct");
+            tempButton.setTextColor(Color.RED);
+            tempButton.setClickable(false);
+            X.setClickable(false);
+            tempButton=null;
+            disableAllButtons();
+
         }
     }
 }
