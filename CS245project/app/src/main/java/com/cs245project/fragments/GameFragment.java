@@ -417,9 +417,6 @@ public class GameFragment extends Fragment {
     }
 
     private void disableAllButtons(){
-        //for(int i = 0; i < numOfButtons; i++){
-        //    buttons.get(i).setEnabled(false);
-        //}
         toggle1.setEnabled(false);
         toggle2.setEnabled(false);
         toggle3.setEnabled(false);
@@ -459,9 +456,6 @@ public class GameFragment extends Fragment {
     }
 
     private void enableAllButtons(){
-        //for(int i = 0; i < numOfButtons; i++){
-        //    buttons.get(i).setEnabled(true);
-        //}
         toggle1.setEnabled(true);
         toggle2.setEnabled(true);
         toggle3.setEnabled(true);
