@@ -381,7 +381,7 @@ public class GameFragment extends Fragment {
         if(savedInstanceState != null) {
             list = savedInstanceState.getStringArrayList("LIST");
             flipped = savedInstanceState.getIntegerArrayList("BUTTONLIST");
-
+            System.out.println("Hi");
             if (flipped != null && buttons != null) {
                 for (int i = 0; i < flipped.size(); i++) {
                     ToggleButton b = buttons.get(flipped.get(i));
