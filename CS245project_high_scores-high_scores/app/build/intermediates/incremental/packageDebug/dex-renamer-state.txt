@@ -1,0 +1,4 @@
+#Wed Mar 08 16:33:40 PST 2017
+base.0=C\:\\Users\\jason\\OneDrive\\Documents\\GitHub\\CS245-Android-Project\\CS245project_high_scores-high_scores\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main
+renamed.0=classes.dex
+file.0=C\:\\Users\\jason\\OneDrive\\Documents\\GitHub\\CS245-Android-Project\\CS245project_high_scores-high_scores\\app\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\1f\\main\\classes.dex

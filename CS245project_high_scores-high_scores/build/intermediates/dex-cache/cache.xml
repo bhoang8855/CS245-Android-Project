@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\b993e7ba3f27153204f7052e7de17cb0fc04781c\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="02741d05d4b697fba5e279e9881aaa1da0ca7c7f">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_f0a147c9821d523102c5451bea17e9b9a078e10e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\bcee420fcf575e4cc1c3165fb3fa8d64ad78b1ee\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_6e13e676683d1c8deecaf58f306c6183c3f23df4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\7303acecf27e19bc3a5c4eefa789cffea90e7890\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_af8ecb9421623eae463622c53fa40d227482898e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\efc95fd3e53916a657fee604638773ad0f666aa6\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_9f65d3298f201b2d52effa5a76e7d613f14f0ae2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\46da96ce7adbffa8d34152edc9adb44d7e6a8aee\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_bb0f78f49ff460cf4dada1eb604053f3a9b27199.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\AppData\Local\Android\sdk\extras\android\m2repository\com\android\support\support-annotations\25.1.1\support-annotations-25.1.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="b59b6ee8d6ecc03e672d253800430343493a6ed8">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\support-annotations-25.1.1_1d25663dd84725fea9bb5979bc47092482059ba8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\e540ee17253b9485619fcf52a61db9d159c45569\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_8703feff2826a801c93629be24fdf5eedf6ac97a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\2eeeb2d3219b9b15514b941af4e8a85707aec070\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_90c40c310768b512e3b52bd63283f3f52893074e.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\88cb22ad59513737bab48521a1b7cde471f5eda2\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_5d4eb926ab9535933b725f1c501924713a8a44dd.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\95be17c77ae03492b3ddceddbfc8c8f21eb5eef8\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="3e04ac8ca644ea7baddf6fdcf72e15c79e9df94a">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_99e5dc3b2296450f081bb668b77ee61690a28992.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\jason\.android\build-cache\aa4071eb338a136233335bc56b36645d77dd3980\output\jars\classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9c1c44672010b6847f3744ec3702624d8d16c240">
+        <dex dex="C:\Users\jason\OneDrive\Documents\GitHub\CS245-Android-Project\CS245project_high_scores-high_scores\app\build\intermediates\pre-dexed\debug\classes_378f53fe8e9087d0000d0dd7da6414d76ec468f2.jar" />
+    </item>
+
+</items>

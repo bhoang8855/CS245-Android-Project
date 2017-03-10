@@ -15,6 +15,8 @@ import java.util.ArrayList;
  * Created by jason on 2/25/2017.
  */
 
+//class HomeFragment
+//shows the home menu
 public class HomeFragment extends Fragment {
 
 

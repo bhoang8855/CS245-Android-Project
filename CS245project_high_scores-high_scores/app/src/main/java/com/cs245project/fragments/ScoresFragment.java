@@ -16,6 +16,8 @@ import com.cs245project.MainActivity;
 import com.cs245project.R;
 
 import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -24,11 +26,12 @@ import java.io.InputStreamReader;
  * Created by Gary on 3/8/2017.
  */
 
+
+//class ScoresFragment
+//shows high scores for a particular difficulty level
 public class ScoresFragment extends Fragment {
 
     private int difficulty = 0;
-
-
 
     public static ScoresFragment newInstance(int difficulty) {
         ScoresFragment fragment = new ScoresFragment();
@@ -47,27 +50,30 @@ public class ScoresFragment extends Fragment {
         if(difficulty == 4) {
             view = inflater.inflate(R.layout.fragment_score4, container, false);
 
-            AssetManager am = view.getContext().getAssets();
             try {
-                String string = "";
-                InputStream is = am.open("highscore4.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
-                int counter = 1;
-                while ((string = reader.readLine()) != null) {
-                    if (counter == 1) {
-                        TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
-                    }
-                    if (counter == 2) {
-                        TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
-                    }
-                    if (counter == 3) {
-                        TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
-                    }
-                    counter++;
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                if (mFile.exists()) {
+                    String string = "";
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
+                    int counter = 1;
+                    while ((string = reader.readLine()) != null) {
+                        if (counter == 1) {
+                            TextView textView = (TextView) view.findViewById(R.id.highScore1);
+                            textView.setText("1.)" + string);
+                        }
+                        if (counter == 2) {
+                            TextView textView = (TextView) view.findViewById(R.id.highScore2);
+                            textView.setText("2.)" + string);
+                        }
+                        if (counter == 3) {
+                            TextView textView = (TextView) view.findViewById(R.id.highScore3);
+                            textView.setText("3.)" + string);
+                        }
+                        counter++;
 
+                    }
                 }
             } catch (IOException e) {
                 e.printStackTrace();
@@ -78,21 +84,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore6.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -106,21 +114,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore8.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -134,21 +144,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore10.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -162,21 +174,24 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore12.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -190,21 +205,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore14.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -218,21 +235,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore16.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -246,21 +265,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore18.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -274,21 +295,23 @@ public class ScoresFragment extends Fragment {
             AssetManager am = view.getContext().getAssets();
             try {
                 String string = "";
-                InputStream is = am.open("highscore20.txt");
-                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+                File path = getActivity().getFilesDir();
+                File mFile = new File(path, "highscore" + difficulty + ".txt");
+                FileInputStream fileInputStream = new FileInputStream(mFile);
+                BufferedReader reader = new BufferedReader(new InputStreamReader(fileInputStream));
                 int counter = 1;
                 while ((string = reader.readLine()) != null) {
                     if (counter == 1) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore1);
-                        textView.setText("1.)                      "+ string);
+                        textView.setText("1.)"+ string);
                     }
                     if (counter == 2) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore2);
-                        textView.setText("2.)                      " + string);
+                        textView.setText("2.)" + string);
                     }
                     if (counter == 3) {
                         TextView textView = (TextView) view.findViewById(R.id.highScore3);
-                        textView.setText("3.)                      " + string);
+                        textView.setText("3.)" + string);
                     }
                     counter++;
 
@@ -304,8 +327,4 @@ public class ScoresFragment extends Fragment {
     }
 
 
-    public void checkButton( ToggleButton X, int I) {
-
-
-    }
 }

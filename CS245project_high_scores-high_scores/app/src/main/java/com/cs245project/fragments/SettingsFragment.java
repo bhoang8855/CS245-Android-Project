@@ -17,6 +17,9 @@ import com.cs245project.R;
  * Created by jason on 2/25/2017.
  */
 
+
+//Class SettingsFragment
+//allows user to select difficulty before playing game
 public class SettingsFragment extends Fragment {
     int progress = 0;
     int difficulty = 0;

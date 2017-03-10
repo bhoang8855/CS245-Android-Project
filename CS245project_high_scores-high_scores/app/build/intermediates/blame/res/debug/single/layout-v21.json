@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "C:\\Users\\jason\\OneDrive\\Documents\\GitHub\\CS245-Android-Project\\CS245project_high_scores-high_scores\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_custom_big.xml",
+        "source": "C:\\Users\\jason\\.android\\build-cache\\e540ee17253b9485619fcf52a61db9d159c45569\\output\\res\\layout-v21\\notification_template_custom_big.xml"
+    },
+    {
+        "merged": "C:\\Users\\jason\\OneDrive\\Documents\\GitHub\\CS245-Android-Project\\CS245project_high_scores-high_scores\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_template_icon_group.xml",
+        "source": "C:\\Users\\jason\\.android\\build-cache\\e540ee17253b9485619fcf52a61db9d159c45569\\output\\res\\layout-v21\\notification_template_icon_group.xml"
+    },
+    {
+        "merged": "C:\\Users\\jason\\OneDrive\\Documents\\GitHub\\CS245-Android-Project\\CS245project_high_scores-high_scores\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action_tombstone.xml",
+        "source": "C:\\Users\\jason\\.android\\build-cache\\e540ee17253b9485619fcf52a61db9d159c45569\\output\\res\\layout-v21\\notification_action_tombstone.xml"
+    },
+    {
+        "merged": "C:\\Users\\jason\\OneDrive\\Documents\\GitHub\\CS245-Android-Project\\CS245project_high_scores-high_scores\\app\\build\\intermediates\\res\\merged\\debug\\layout-v21\\notification_action.xml",
+        "source": "C:\\Users\\jason\\.android\\build-cache\\e540ee17253b9485619fcf52a61db9d159c45569\\output\\res\\layout-v21\\notification_action.xml"
+    }
+]

@@ -15,6 +15,8 @@ import com.cs245project.R;
  * Created by jason on 2/25/2017.
  */
 
+//class ScoresSettingsFragment
+//allows user to select which high scores to view
 public class ScoresSettingsFragment extends Fragment {
 
     int progress = 0;

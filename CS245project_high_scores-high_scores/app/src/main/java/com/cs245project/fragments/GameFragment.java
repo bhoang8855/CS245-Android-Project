@@ -25,6 +25,8 @@ import java.util.List;
  * Created by jason on 2/25/2017.
  */
 
+//class GameFragment
+//main game fragment and handles all game logic
 public class GameFragment extends Fragment {
 
     private int points;
@@ -370,6 +372,8 @@ public class GameFragment extends Fragment {
         return view;
     }
 
+    //mehthod gameCheck
+    //checks if game is completed
     private void gameCheck() {
         for(int i = 0; i < difficulty; i++){
             if(buttons.get(i).getCurrentTextColor() != 0xFF00FF00) {
@@ -379,7 +383,7 @@ public class GameFragment extends Fragment {
         getActivity().getSupportFragmentManager()
                 .beginTransaction()
                 .addToBackStack(null)
-                .replace(R.id.main_container, EndGameFragment.newInstance(points))
+                .replace(R.id.main_container, EndGameFragment.newInstance(points, difficulty))
                 .commit();
 
 
@@ -440,17 +444,11 @@ public class GameFragment extends Fragment {
         ((Button)getActivity().findViewById(R.id.end_game_button)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                for(int i = 0; i < difficulty; i++){
 
-                    buttons.get(i).setChecked(true);
-                    buttons.get(i).setClickable(false);
-                    buttons.get(i).setTextColor(Color.BLACK);
-
-                }
 
                 getActivity().getSupportFragmentManager()
                         .beginTransaction()
-                        .replace(R.id.main_container, EndGameFragment.newInstance(points))
+                        .replace(R.id.main_container, EndGameFragment.newInstance(points, difficulty))
                         .addToBackStack(null)
                         .commit();
 
@@ -462,6 +460,8 @@ public class GameFragment extends Fragment {
         });
     }
 
+    //method:disableAllButtons
+    //disables all buttons
     private void disableAllButtons(){
         toggle1.setEnabled(false);
         toggle2.setEnabled(false);
@@ -501,6 +501,8 @@ public class GameFragment extends Fragment {
         }
     }
 
+    //method:enableAllButtons
+    //enables all buttons
     private void enableAllButtons(){
         toggle1.setEnabled(true);
         toggle2.setEnabled(true);
@@ -540,6 +542,8 @@ public class GameFragment extends Fragment {
         }
     }
 
+    //method checkButton
+    //checks if current toggled button is a correct match or not
     public void checkButton(ToggleButton X, int I, View view) {
 
         System.out.println("hitXXX");
